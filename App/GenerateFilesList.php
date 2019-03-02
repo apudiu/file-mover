@@ -85,9 +85,9 @@ class GenerateFilesList {
 
 
 	/**
-	 * Filteres an array
+	 * Filters an array
 	 * @param  string $regEx     filter string in form of Regular Expression
-	 * @param  string $fileNames Files full path
+	 * @param  array $fileNames Files full path
 	 * @return array            Filtered files list
 	 */
 	private function filterFileNames($regEx, $fileNames) {

@@ -38,6 +38,12 @@ class Process {
      * @var string
      */
 	public $copy;
+
+    /**
+     * Specifies whether to user strict filename
+     * @var string [y/n]
+     */
+	public $strict;
 	
 	/**
 	 * Files move list (txt) files contents or
@@ -144,9 +150,9 @@ class Process {
 		}
 
         if ($this->copy) {
-            echo LE.count($this->filesList).' files has to be copied'.LE;
+            echo LE.count($this->filesList).' file(s) has to be copied'.LE;
 		} else {
-            echo LE.count($this->filesList).' files has to be moved'.LE;
+            echo LE.count($this->filesList).' file(s) has to be moved'.LE;
         }
 
 	}
@@ -254,9 +260,9 @@ class Process {
 		}
 
         if ($this->copy) {
-            $msg = ($moved > 0) ? "Done, $moved files has been copied to: $this->outDir" : "No file has been copied!";
+            $msg = ($moved > 0) ? "Done, $moved file(s) has been copied to: $this->outDir" : "No file has been copied!";
 		} else {
-            $msg = ($moved > 0) ? "Done, $moved files has been moved to: $this->outDir" : "No file has been moved!";
+            $msg = ($moved > 0) ? "Done, $moved file(s) has been moved to: $this->outDir" : "No file has been moved!";
 		}
 		
 		echo LE.$msg.LE;
